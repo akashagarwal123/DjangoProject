@@ -1,0 +1,68 @@
+
+        <style>
+            ul, #myUL {
+              list-style-type: none;
+            }
+            
+            #myUL {
+              margin: 0;
+              padding: 0;
+            }
+            
+            .caret {
+              cursor: pointer;
+              -webkit-user-select: none; /* Safari 3.1+ */
+              -moz-user-select: none; /* Firefox 2+ */
+              -ms-user-select: none; /* IE 10+ */
+              user-select: none;
+            }
+            
+            .caret::before {
+              content: "\25B6";
+              color: black;
+              display: inline-block;
+              margin-right: 6px;
+            }
+            
+            .caret-down::before {
+        
+              transform: rotate(90deg);  
+            }
+            
+            .nested {
+              display: none;
+            }
+            
+            .active {
+              display: block;
+            }
+            </style>
+<ul id="myUL" style="color: black;font-size:26px">
+<li><span >Courses</span>&nbsp;&nbsp;<span class="caret"></span>
+<ul class="nested">
+<li>MBBS in Ukraine
+<ul>
+  <li><a href="/poltava" style="color: darkgreen;" >Poltava State Medical University</a></li>
+  <li><a href="/ternopil" style="color: darkgreen;">Ternopil State Medical University</a></li>
+  <li><a href="/vinista" style="color: darkgreen;">Vinnitsa National Medical University</a></li>
+  <li><a href="/kharkiv" style="color: darkgreen;">V.N.Karazin Kharkiv National University</a></li>
+</ul>
+</li>
+<li>Engineering in Ukraine</li>
+<li>Aviation in Ukraine</li>
+
+</ul>
+</li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+toggler[i].addEventListener("click", function() {
+this.parentElement.querySelector(".nested").classList.toggle("active");
+this.classList.toggle("caret-down");
+});
+}
+</script>

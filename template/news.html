@@ -1,0 +1,384 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>News</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									<li><a href="/about" style="color: darkred;">About us</a></li>
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us:+380-684090715 </div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li>
+					{% include 'menu_courses.html'%}
+					</li>
+				
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: +380-684090715 </div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/IMG_8044.jpeg)"></div>
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Quick Enquiry!!!</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			<div class="row">
+
+				<!-- News Container -->
+				<div class="col-lg-8">
+					<div class="news_container">
+						
+						<!-- News Post -->
+						<div class="news_post">
+							<div class="news_post_image"><img src="{% static 'assets/images/my_folder/news_mbbs.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>02</div>
+									<div>june</div>
+								</div>
+								<div class="news_post_title"><a href="#">
+									HOW TO CHOOSE A COUNTRY AND EVEN A<br> UNIVERSITY FOR MBBS ABROAD
+								</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">Leave a Comment	/ Education</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>
+										In the following article we’ll mention an important topic that’s “HOW TO DECIDE ON A COUNTRY AND UNIVERSITY FOR MBBS ABROAD“ let’s discuss:
+
+Opting for a MBBS degree abroad is really one among the most famous choices that Indian students choose . Generally, the gaining factor for MBBS degree in India is sort of less or we can say it’s really complicated as compared to other parts of the globe.
+
+The fact behind this is often actually the drastic difference between the number of MBBS seats that are available in India as compared to abroad. Last year, around 12 lakh medical students attempted the NEET examinations for 60,000 seats.
+
+The number is big & that amounts nearly 20 students per single seat. So, yes this is often the main reason why the no. of Indian students who actually migrate abroad for MBBS study.
+									
+<br/>Advantages of Studying MBBS Abroad<br/>
+<strong>&mdash;</strong>&nbsp;Excellent standard of education.<br/>
+<strong>&mdash;</strong>&nbsp;Advanced clinical exposure.<br/>
+<strong>&mdash;</strong>&nbsp;Affordable cost of study.<br/>
+<strong>&mdash;</strong>&nbsp;MCI & WHO recognized medical colleges.</br/>
+<strong>&mdash;</strong>&nbsp;Study in top ranked medical universities within the world.
+								</p>
+								</div>
+								<div class="news_post_link"><a href="#">Read More</a></div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post">
+							<div class="news_post_image"><img src="{% static 'assets/images/my_folder/USMLE.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>28</div>
+									<div>November</div>
+								</div>
+								<div class="news_post_title"><a href="#">
+									USMLE – Everything You need to know!</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="#">Leave a Comment	/ Education
+										</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>
+										USMLE Stands for the United States Medical Licensing Exam. 
+										The main purpose of this exam is to test medical students across 
+										the USA as well as the world who want to practice medicine in the USA 
+										or pursue further medical studies in the country. Its is one of the most 
+										respected and recognized Medical Licensing exam across the world. 
+										The exam is conducted times a year and students can sit in the exam every 
+										time if they don’t qualify but the fourth and subsequent attempts at the 
+										exam must be at least 12 months after your first attempt, and at least six months after 
+										your most recent attempt. The exam is divided into different steps.<br/>
+
+										Steps for USMLE
+										
+										To start with the process of USMLE students need to apply for the ECFMG
+										 identification no. and then apply for the ECFMG certification. A
+										 ll of the application processes can be done via Interactive web Applications of ECFMG.
+										
+										Each step has a fee that is to be paid. The latest fee can be found on the ECFMG website.
+										
+										The fee for ECFMG certification as of  2020 is $145.<br/>
+										
+										Step 1:-<br/>
+										
+										USMLE Step 1 can be given all across the world at the centers specified by ECFMG. The Fee for USMLE First Step is $965 plus $160 Delivery surcharge as of 2020. 
+										
+										USMLE Step 1 is an 8-hour long exam which consists of 7 blocks. Each block has 40 questions. Each block has a time limit of 60 mins.   
+										
+										Total questions in USMLE Step 1 is 280. The qualifying score is 192.
+										
+										The Subjects asked is USMLE Step 1 are Basic sciences Subjects taught till 3rd year in the Medical Schools. 
+										
+										From 2020 Onwards a new change has been made in regards to USMLE Step 1 i.e from 2020 the USMLE Step 1 is going to be a Pass/Fail exam only. And the Marks obtained be it high or low won’t be of much importance. Once one has qualified the USMLE Step 1, they can apply for USMLE Step 2.
+										<br/>
+										 Step 2
+										<br/>
+										USMLE Step 2 is divided into 2 parts i.e CK(Clinical knowledge) and CS(Clinical Skil).
+										
+										USMLE Step 2(CK)
+										
+										Just like the USMLE Step 1, USMLE Step 2(CK) can be given by the students in their home country itself.
+										
+										The USMLE Step 2(CK) Fee is $965 plus $180. USMLE Step 2(CK) tests students for their clinical knowledge and subjects like Internal Medicine and Pediatrics are focused upon. 
+										
+										USMLE Step 2(CS)
+										
+										Once USMLE Step 2(CK) is passed by the students they can apply for USMLE Step 2(CS). Here Students need to travel to the USA and they will be tested for their clinical skills and language proficiency. Students are given 12
+										patients(actors) and then they have to diagnose and prescribe treatments to them. The Fee for USMLE Step 2(CS) is $1600.
+										<br/>
+										USMLE Step 3
+										<br/>
+										The USMLE Step 3 is essentially just matching. Once a student has cleared all the above steps as well as USCE they can apply for residency in various hospitals or universities.  
+										
+										USCE
+										
+										USCE Stands for the United States Clinical Experience. All the International Medical graduates are supposed to take part in USCE in order to become eligible to apply for residency in the USA. The Fee for USCE varies from University to University. On average, the Fee for USCE is in between $2000 – $3000.  
+
+									</p>
+								</div>
+								<div class="news_post_link"><a href="#">Read More</a></div>
+							</div>
+						</div>
+
+						
+					</div>
+
+					<!-- Pagination -->
+					<div class="pagination">
+						<ul class="d-flex flex-row align-items-start justify-content-start">
+							<li class="active"><a href="#">1.</a></li>
+							<li><a href="#">2.</a></li>
+							<li><a href="#">3.</a></li>
+							<li><a href="#">4.</a></li>
+							<li><a href="#">5.</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- News Sidebar -->
+				<div class="col-lg-4">
+					<div class="news_sidebar">
+
+						<!-- Categories -->
+						<div class="categories">
+							<div class="sidebar_title">Categories</div>
+							<div class="sidebar_list">
+								<ul>
+									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">MBBS<span class="ml-auto">(09)</span></div></a></li>
+									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Engineering<span class="ml-auto">(12)</span></div></a></li>
+									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Aviation<span class="ml-auto">(16)</span></div></a></li>
+									<li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Uncategorized<span class="ml-auto">(22)</span></div></a></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Latest News -->
+						<div class="latest">
+							<div class="sidebar_title">Latest News</div>
+							<div class="latest_container">
+								
+								<!-- Latest Post -->
+								<div class="latest_post d-flex flex-row align-items-start justify-content-start">
+									<div class="latest_post_image"><img src="{% static 'assets/images/my_folder/news_mbbs.jpg' %}" alt=""></div>
+									<div class="latest_post_content">
+										<div class="latest_post_date d-flex flex-row align-items-end justify-content-start">
+											<div class="latest_post_day">02</div>
+											<div class="latest_post_month">june</div>
+										</div>
+										<div class="latest_post_title"><a href="#">how-to-choose-a-country-and-even-a-university-for-mbbs-in-abroad</a></div>
+										<div class="latest_post_text"><p>Leave a Comment	/ Education </p></div>
+									</div>
+								</div>
+
+								<!-- Latest Post -->
+								<div class="latest_post d-flex flex-row align-items-start justify-content-start">
+									<div class="latest_post_image"><img src="{% static 'assets/images/my_folder/USMLE.jpg' %}" alt=""></div>
+									<div class="latest_post_content">
+										<div class="latest_post_date d-flex flex-row align-items-end justify-content-start">
+											<div class="latest_post_day">28</div>
+											<div class="latest_post_month">Nov</div>
+										</div>
+										<div class="latest_post_title"><a href="#">USMLE – Everything You need to know!</a></div>
+										<div class="latest_post_text"><p>Leave a Comment	/ Education</p></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="travello">
+							<div class="background_image" style="background-image:url(/static/assets/images/my_folder/extra_news.jpg)"></div>
+							<div class="travello_content">
+								<div class="travello_content_inner">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="travello_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-center justify-content-end">
+										<span class="travello_title">Build 100% future with us</span>
+										<span class="travello_subtitle">Eduglobal9...Your trust brand!!!</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	{% include 'footer.html'%}
+</div>
+
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/news.js' %}"></script>
+</body>
+</html>

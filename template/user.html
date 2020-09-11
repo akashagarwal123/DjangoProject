@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div>
+<form method="POST" action="logout_user"> 
+    {% csrf_token %}
+    <div id="container" align="right">
+        <input type="submit" value="Logout" style="padding: 2px 30px 2px 30px; background-color:honeydew; color:blue;">
+        <a href="{% url 'password_change'%}" style="text-decoration: none;color: darkblue;background-color: honeydew;
+    
+        padding:2px 30px 2px 30px;border-style:ridge;">Change Password</a>
+    </div>
+    <div align="center">
+        <p >
+            <h1>Hello this is the user experience page</h1>
+        </p>
+
+    </div>
+
+</form>
+</div>
+<h3 style="color:red" align="center">Under developement...</h3>
+
+{% endblock %}

@@ -1,0 +1,192 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" style="color:darkred">
+            <strong>Courses</strong>
+            </button>
+            <style>
+ul, #myUL {
+list-style-type: none;
+}
+
+#myUL {
+margin: 0;
+padding: 0;
+width: fit-content;
+}
+
+.caret {
+cursor: pointer;
+-webkit-user-select: none; /* Safari 3.1+ */
+-moz-user-select: none; /* Firefox 2+ */
+-ms-user-select: none; /* IE 10+ */
+user-select: none;
+}
+
+.caret::before {
+content: "\25B6";
+color: black;
+display: inline-block;
+margin-right: 6px;
+}
+
+.caret-down::before {
+
+transform: rotate(90deg);  
+}
+
+.nested {
+display: none;
+}
+
+.active {
+display: block;
+}
+</style>
+
+            <div id="myDropdown" class="dropdown-content">
+              <div>
+                <style>
+                    ul, #myUL {
+                      list-style-type: none;
+                    }
+                    
+                    #myUL {
+                      margin: 0;
+                      padding: 0;
+                      width: fit-content;
+                    }
+                    
+                    .box {
+                      cursor: pointer;
+                      -webkit-user-select: none; /* Safari 3.1+ */
+                      -moz-user-select: none; /* Firefox 2+ */
+                      -ms-user-select: none; /* IE 10+ */
+                      user-select: none;
+                    }
+                    
+                    .box::before {
+                      content: "";
+                      color: black;
+                      display: inline-block;
+                      margin-right: 6px;
+                    }
+                    
+                    .check-box::before {
+                      content: "\2611"; 
+                      color: dodgerblue;
+                    }
+                    
+                    .nested {
+                      display: none;
+                    }
+                    
+                    .active {
+                      display: block;
+                    }
+                    </style>
+                    <ul id="myUL">
+                        <li><span class="box" style="color: whitesmoke; width: 250px;">MBBS</span>
+                          <ul class="nested">
+                            <li><a href="/poltava" >Poltava State Medical University</a></li>
+                            <li><a href="/ternopil" >Ternopil State Medical University</a></li>
+                            <li><a href="/vinista" >Vinnitsa National Medical University</a></li>
+                            <li><a href="/kharkiv" >V.N.Karazin Kharkiv National University</a></li>
+                          </ul>
+                        </li>
+                        <li><span class="box" style="color: whitesmoke;">Engineering</span>
+                            <ul class="nested">
+                              <li><a href=""></a></li>
+                              <li><a href=""></a></li>
+                            </ul>
+                          </li>
+                          <li><span class="box" style="color: whitesmoke;">Aviation</span>
+                            <ul class="nested">
+                              <li><a href=""></a></li>
+                              <li><a href=""></a></li>
+                            </ul>
+                          </li>
+  
+                      </ul>
+                      
+                      <script>
+                      var toggler = document.getElementsByClassName("box");
+                      var i;
+                      
+                      for (i = 0; i < toggler.length; i++) {
+                        toggler[i].addEventListener("click", function() {
+                          this.parentElement.querySelector(".nested").classList.toggle("active");
+                          this.classList.toggle("check-box");
+                        });
+                      }
+                      </script>
+                      
+              </div>
+            </div>
+          </div>
+          <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.contains('show');
+                  }
+                }
+              }
+            }
+            </script>
+            
+            <style>
+                .dropbtn {
+                 
+                  color:whitesmoke;
+                    background-color:transparent;
+                  font-size: 16px;
+                  border: none;
+                 
+                }
+                
+                
+                
+                .dropdown {
+                  position: relative;
+                  display: inline-block;
+                }
+                
+                .dropdown-content {
+                  display:none;
+                  position: absolute;
+                  background-color:teal;
+                  min-width: 160px;
+                  overflow: auto;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  z-index: 1;
+                }
+                
+                .dropdown-content a {
+                  color: black;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                }
+                
+                .dropdown a:hover {background-color: transparent}
+                
+                .show {display: block;}
+                </style>
+        
+    </body>
+</html>

@@ -1,0 +1,1021 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ternopil National Medical University</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									<li><a href="/about" style="color: darkred;">About us</a></li>
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us: +380-684090715</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+    </header>
+</div>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li>
+					{% include 'menu_courses.html'%}
+					</li>
+				
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us:+380-684090715</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/ternopil.jpg)"></div>
+	</div>
+	<!-- Search -->
+
+	<div class="home_search" >
+		<div class="container" >
+			<div class="row" >
+				<div class="col">
+					<div class="home_search_container" >
+						<div class="home_search_title">Get free counselling from our experts</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    </div>
+    <body class="responsive">
+        <br/>
+    <div class="card mb-3" style="max-width: 2000px;max-height: fit-content;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <svg class="bd-placeholder-img" width="100%" height="200" xmlns="/assets/images/my_folder/USMA-1.png" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" 
+           style="background-image:url(static/assets/images/my_folder/ternopil_image.jpg);" role="img">
+               
+            </svg>
+      
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="color: black;">
+              <h5 class="card-title">About Ternopil National Medical University, Ukraine </h5>
+            
+              <p class="card-text" style="color: black;">
+               
+                Ternopil National Medical University is ranked among one of the top universities in Ukraine. It was established on September 1, 1957. The university has got the third rank with IVth highest level of accreditation by Ministry of Health and Education in Ukraine. There are 800 foreign students from 48 countries all over the world.
+
+                Ternopil National Medical University is well-known for cultural traditions. Around 10,000 students are studying medical course at the university. The Ternopil Medical University has 30 departments in which 148 teachers are working.
+                
+                Today, the university has become a scientific, medical, pedagogical, cultural & educational center of Ukraine. In the year 2004, the specialized council in Paediatrics, Obstetrics & Gynaecology was established.
+              </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br/>
+    <br/>
+
+    <div align="center">
+        <h3 align="center" style="color: darkblue;">Ternopil National Medical University - Quick Highlights</h3>
+    <br/>
+        <table border="1"  style="color: black;">
+       <tbody>
+        <tr>
+            <td><h4>Acronyms</h4></td>
+            <td><h5>TNMU</h5></td>
+        </tr>
+           <tr style="background-color: lightskyblue;">
+               <td><h4>Last Date to Apply</h4></td>
+               <td><h5>August, 2020</h5></td>
+           </tr>
+        <tr>
+            <td><h4>Basic Eligibility</h4></td>
+            <td><h5>50% in PCB</h5></td>
+        </tr>
+        <tr  style="background-color:lightskyblue;">
+            <td ><h4>NEET Exam</h4></td>
+            <td><h5>Required</h5></td>
+        </tr>
+        <tr>
+            <td><h4>Annual Tution Fee</h4></td>
+            <td><h5>Rs. 3.08 Lakhs/Year</h5></td>
+        </tr>
+        <tr  style="background-color:lightskyblue;">
+            <td><h4>Course Duration</h4></td>
+            <td><h5>6 years including internship</h5></td>
+        </tr>
+        <tr >
+            <td><h4>Medium of Teaching</h4></td>
+            <td><h5>English & European</h5></td>
+        </tr>
+        <tr  style="background-color:lightskyblue;">
+            <td><h4>university Ranking</h4></td>
+            <td><h5>Country Rank -15<br/>
+            World Rank - 3368</h5></td>
+        </tr>
+        <tr >
+            <td><h4>University Recognition</h4></td>
+            <td><h5>MCI, WHO and UΝЕЅСО accredited</h5></td>
+        </tr>
+    </tbody>
+    </table>
+    <br/>
+    </div>
+    <br/>
+    <div style="margin-left: 50px;" align="center">
+        <h2 style="color: darkblue;">
+            Fee Structure: For MBBS Course at Ternopil National Medical University 
+        </h2>
+        <div align="center">
+        <table class="table" border="1" style="width: fit-content;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Particulars</th>
+                    <th>Annual Fees</th>
+                  
+                </tr>
+            </thead>
+            <tbody style="color: black;">
+                <tr>
+                    <td>Fee in USD (approx)</td>
+                    <td>$ 4,400</td>
+                  
+                </tr>
+                <tr>
+                    <td>Fee in Indian Rupees (approx)</td>
+                    <td>Rs.3,08,000</td>
+                    
+                </tr>
+                <tr>
+                    <td>Hostel & Food in Rupees(approx)</td>
+                    <td>Rs.40,000</td>
+                  
+                </tr>
+                <tr>
+                    <td>Total Fee</td>
+                    <td>Rs.3,48,000</td>
+                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div style="margin-left: 50px;">
+        <h2  style="color: darkblue;">
+            Benefits of Studying MBBS at Ternopil National Medical University
+          </h2>
+          <h4 style="color: black;">
+            Ternopil National Medical 
+            University provides the following major reasons to students for taking admission to MBBS course:
+          </h4>
+<br/>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-8" align="left">
+             <div class="card-body">
+                 <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         No entrance tests such as IELTS or GMATS are required for admission in Ternopil National Medical University
+
+
+      
+                         </p>
+                   </div>
+                   <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Ternopil Medical University is a part of the Bologna Process which consist of a series of agreements done with European countries to establish high-quality education.
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        The degree awarded in Ternopil National Medical University is globally recognized by an international corporation.
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Cost of living in Ukraine is affordable for every foreign citizen.
+
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Individual attention is given to each & every student with high authorized medical staff.
+
+
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Cost of studying MBBS in TNMU, Ukraine is affordable for every international student.
+
+
+
+
+                        </p>
+                  </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <br/>
+      <div align="center">
+        <h2  style="color: darkblue;">
+            Ternopil National Medical University - Course Duration
+          </h2>
+          <h4 style="color: black;">
+            Just like the other top medical universities in Ukraine, 
+            Ternopil National Medical University also offers 6 years of MBBS course:
+          </h4>
+<br/>
+      <div  style="background-color: white;">
+         <div class="row no-gutters" >
+           <div   style="width: fit-content;" >
+                 <div  >
+                     <p style="color: black;"> 
+                         The MBBS degree at Ternopil National Medical University
+                          is divided into two parts. The first 5 years are dedicated towards theoretical 
+                          and some practical knowledge of medical science, whereas the last 1 year is distributed for 
+                          the internship in private & government affiliated hospitals.
+                         </p>
+                   </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <br/>
+      <div class="table-responsive-sm">
+          {% include 'ternopil_syllabus.html' %}
+      </div>
+      <br/>
+      <div style="margin-left: 50px;">
+        <h2  style="color: darkblue;">
+            Eligibility Criteria
+          </h2>
+          <h4 style="color: black;">
+            For studying medicine at V.N. Karazin KNU, a candidate needs to qualify the following criteria:
+          </h4>
+<br/>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-8" align="left">
+             <div class="card-body">
+                 <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Students have to submit legal and authorized documents
+
+
+      
+                         </p>
+                   </div>
+                   <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Students must have passed 10+2 with an aggregate of 55% in PCB.
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        It is mandatory to have original certificates of respective documents.
+
+      
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        For Indian students, they have to submit a copy of a nationality certificate.
+
+
+                        </p>
+                  </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <br/>
+      <div>
+        <div>
+            <div style="color: black;">
+            <div class="container">
+              <div class="page-header">
+                  <h2 id="timeline"><b>Admission Procedure for Students</b></h2>
+              </div><br>
+              <ul class="timeline">
+                  <li>
+                    <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body" >
+                          <h4><strong>Step 1</strong></h4>
+                        <p style="color: blue;">
+                            The candidates who wish to apply for MBBS at TNMU do forward your resume to
+                   <strong><a style="color: black;text-decoration: none;" href="https://www.deans_office@tdmu.edu.ua">
+                    CLICK HERE</a> 
+                   </strong>that is 
+                            approved by the Ministry of Education and Science of Ukraine. It usually takes 10-15 days to review the applications.
+          
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="timeline-inverted">
+                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <h4><strong>Step 2</strong></h4>
+                        <p style="color: blue;"> 
+                            Eligible candidate will get an invitation letter from Ternopil National Medical University either by mail or by courier.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <h4><strong>Step 3</strong></h4>
+                        <p style="color: blue;">
+                            The candidate should then submit an invitation letter to the Embassy of Ukraine for applying for a student visa.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+          
+                 <li class="timeline-inverted">
+                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <h4><strong>Step 4</strong></h4>
+                        <p style="color: blue;">
+                            After getting a student visa, students must report to the International Students Office of Ternopil National Medical University.
+                      </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <h4><strong>Step 5</strong></h4>
+                        <p style="color: blue;">
+                            By confirming the arrival time, students should inform to the International Students Office for the further application process.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                  <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <h4><strong>Step 6</strong></h4>
+                        <p style="color: blue;">
+                            The admission Process will be completed when the candidate signs an agreement with the university and pay the tuition fee for the 1st year.
+
+
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+              </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+    <br/>
+    <div style="margin-left:50px;">
+        <h2  style="color: darkblue;">
+            Documents Required to MBBS Course
+        </h2>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-8" align="left">
+             <div class="card-body">
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Original copy of high school certificate
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Original copy of birth certificate
+      
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Valid health certificate
+
+     
+     
+     
+     
+     
+                      </p>
+                 </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         12 photographs (3cm x 4cm)
+      
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Confirmation letter from the respective Embassy of Ukraine
+
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Student visa with a valid passport
+
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         AIDS/HIV Test Certificate
+
+                        </p>
+                  </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    <br/>
+    <div style="margin-left: 50px;" align="center">
+        <h2 style="color: darkblue;">
+            Ternopil National Medical University - Intake 2020
+
+        </h2>
+        <br/>
+        <h4 style="color: black;">
+            Students should not miss these important dates, these are the important dates 
+            for application and admission dates:
+          </h4>
+        <br/>
+        <div align="center">
+        <table class="table" border="1" style="width: fit-content;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Events</th>
+                    <th>Dates</th>
+                </tr>
+            </thead>
+            <tbody style="color: black;">
+                <tr>
+                    <td>Application Start Date</td>
+                    <td>June 2020</td>
+
+                </tr>
+                <tr>
+                    <td>Invitation Letter</td>
+                    <td>Within 2 weeks from application</td>
+                </tr>
+                <tr>
+                    <td>Admission Start Date	</td>
+                    <td>July 2020
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>	Last Date of Admission	</td>
+                    <td>August 2020
+                    </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br/>   
+<div>
+    <h2 style="color: darkblue;" align="center">
+      Ternopil National Medical University  - FMGE Performance 2019
+  
+    </h2>
+    <br/>
+    <h4 style="color: black;">
+        The details about FMGE performance 
+        for V.N.Karazin Kharkiv National University of year 2019 with passing percent is as follows:
+    </h4>
+    <br/>
+    <table class="table" border="1">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name of University	</th>
+          <th>Appeared</th>
+          <th>Total Pass	</th>
+          <th>Pass %
+          </th>
+        </tr>
+      </thead>
+      <tbody style="color: black;">
+        <tr>
+          <td>Ternopil National Medical University</td>
+          <td>46</td>
+          <td>10</td>
+          <td>21.74%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<br/>   
+<div>
+    <div  align="left" >
+    <h2 style="color: darkblue">Ternopil National Medical University - Accreditation & Recognition
+    </h2>
+    <h5 style="color: black;">
+        <strong>
+            Following accreditation and recognitions make 
+            Ternopil National Medical University the trustworthy institute to take admission for medical courses:
+        </strong>
+    </h5>
+</div>
+    <div style="margin-left: 19px;"  align="left"  >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            World Health Organization (WHO)
+
+
+
+        </p>
+     </div>
+     <div style="margin-left: 19px;"  align="left" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            Medical Council of India (MCI)
+
+        </p>
+     </div>
+     <div style="margin-left: 19px;"  align="left" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            World Federation of Medical Education
+
+
+     </div>
+     <div style="margin-left: 19px;"  align="left" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            Ministry of Education, Ukraine
+          </div>
+    </div>
+<br/>
+<div style="margin-left: 50px;" align="center">
+    <h2 style="color: darkblue;">
+        Cost of Living in Ternopil
+    </h2>
+    <br/>
+    <h4 style="color: black;">
+     <strong>   The living cost and the expenses in Ternopil City (Ukraine)
+         are described below and mentioned in table below:   
+        </strong> 
+    </h4>
+    <br/>
+    <div align="center">
+    <table class="table" border="1" style="width: fit-content;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Particulars</th>
+                <th>Expense in USD</th>
+                <th>Expense in INR</th>
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            <tr>
+                <td>Rent</td>
+                <td>150-165	</td>
+                <td>Rs 10,500 - 11,550</td>
+            </tr>
+            <tr>
+                <td>Food</td>
+                <td>45 - 50</td>
+                <td>Rs 3150-3500</td>
+            </tr>
+            <tr>
+                <td>Transportation</td>
+                <td>15</td>
+                <td>Rs 1050</td>
+            </tr>
+        </tbody>
+    </table>
+    <div align="left">
+        <p style="color: black;" >
+            <strong>Note:-</strong>For the calculation purpose 1$ = Rs. 70 assumed.
+        </p>
+    </div>
+</div>
+<br/>
+</div>
+<div>
+    <h2 style="color: darkblue;">
+      Hostel and Accommodation
+  
+    </h2>
+    <br/>
+    <div align="center" class="table-responsive-sm">
+    <img src="{% static 'assets/images/my_folder/solar.png'%}" alt="..." class="rounded-top"height="100" width="100">
+    <img src="{% static 'assets/images/my_folder/desk.png'%}" alt="..." class="rounded-right" height="100" width="100">
+    <img src="{% static 'assets/images/my_folder/chair.png'%}" alt="..." class="rounded-bottom" height="100" width="100">
+    <img src="{% static 'assets/images/my_folder/blanket.png'%}"  alt="..." class="rounded-left" height="100" width="100">
+    <img src="{% static 'assets/images/my_folder/pillow.jpg'%}" alt="..." class="rounded-circle" height="100" width="100">
+    <img src="{% static 'assets/images/my_folder/mattress.jpg'%}" alt="..." class="rounded-0" height="100" width="100">
+    </div>
+    <br/>
+    <div>
+    <div class="card mb-3" style="background-color: white;">
+       <div class="row no-gutters">
+         <div class="col-md-8" align="left">
+           <div class="card-body">
+               <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       Students are provided multistoried hostels to stay.
+
+  
+    
+                     </p>
+                </div>
+                <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       The hostels are provided to foreign students at very low price and rents.
+
+
+  
+    
+    
+                     </p>
+                </div>
+                <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       Students can stay at lavish hostels with approx Rs. 40,000 fee per year.
+
+
+  
+    
+    
+    
+                     </p>
+                </div>
+                <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       The rooms are equipped with Wifi and high speed internet.
+
+
+    
+                     </p>
+                </div>
+                <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       All the necessary things are provided to students like, bed, bedsheets, pillows, tables, chairs, cupboards.
+
+
+                     </p>
+                </div>
+                <div >
+                   <p style="color: black;"> 
+                       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       University dormitories are provided to students with well-furnished rooms
+
+                     </p>
+                </div> 
+                <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        There are 2-3 students in each room.
+
+ 
+                      </p>
+                 </div> 
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        The accommodation includes the library, gyms, laundry and internet facilities.
+
+ 
+                      </p>
+                 </div> 
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Students can participate in sports and cultural activities taking place in the university and other parts of  city.
+
+ 
+                      </p>
+                 </div> 
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  <br/>
+  <div  align="left" >
+    <h2 style="color: darkblue;">Structure of University:
+    </h2>
+    <div >
+   <p style="color: black;"> 
+       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+       The university has a rector, 5 vice-rectors, 3 deans and 29 heads of the department.
+
+
+
+   </p>
+</div>
+<div >
+   <p style="color: black;"> 
+       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+       The university provides well-crafted libraries with 12,400 
+       copies of books including scientific journals and research papers.
+
+
+
+
+   </p>
+</div>
+<div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        580 teachers and scientists, 87 doctors of sciences, Professors.
+
+
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        348 candidates of science, Assistant professors, 3 members of National Academy of 
+        Medical Science of Ukraine, 48 departments of the university.
+
+
+ 
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        The university has 26 computer classes, 4 channels of internet network with free access for all the students.
+
+ 
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        3 Physicians and 3 inventors of Ukraine.
+
+
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        62 monographs and 87 collected materials of the scientific conference.
+
+
+
+    </p>
+ </div>
+<br/>
+</div>
+</div>
+<br/>
+<div>
+    <h2 align="center" style="color: darkblue;">
+        About Ternopil City
+  
+    </h2>
+  <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-4" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Ternopil is one of the eminent urban communities of western Ukraine, 
+                     situated in its heart and having the status of an essential exchange focus.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     It is a peaceful, incredibly green city with a special climate,
+                      splendid history and a plenty of intriguing normal, 
+                      verifiable and engineering sights.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     In the 16th of century, Ternopil city was occupied by a small territory.
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Ternopil pond which is the largest reservoir of Ternopil also called as
+                      Ternopil lake established on the secret river in 1951.
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     It is the oldest surviving construction in Ternopil.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     In the 20th century, the castle was turned into a Russian classicist palace, and its remaining defenses were annihilated.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Nowadays, a stone wall with highly decorated gates surrounds the palace.
+
+  
+                   </p>
+              </div>
+         </div>
+       </div>
+       <div class="col-md-8">
+        <img src="{%static 'assets/images/my_folder/ternopil_place.jpg'%}" height="450" width="450" class="card-img" alt="...">
+      </div>
+     </div>
+   </div>
+  </div>
+<br/>  
+</div>
+<br/>
+<div>
+    {% include 'footer.html' %}
+</div>
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/news.js' %}"></script>
+    </body>
+    </html>

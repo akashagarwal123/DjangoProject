@@ -1,0 +1,1401 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Poltava State Medical University</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									<li><a href="/about" style="color: darkred;">About us</a></li>
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us: +380-684090715</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li>
+					{% include 'menu_courses.html'%}
+					</li>
+				
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us:+380-684090715</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/poltava.jpg)"></div>
+	</div>
+	<!-- Search -->
+
+	<div class="home_search" >
+		<div class="container" >
+			<div class="row" >
+				<div class="col">
+					<div class="home_search_container" >
+						<div class="home_search_title">Get free counselling from our experts</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <body>
+    <div class="card mb-3" style="max-width: 2000px;max-height: fit-content;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <svg class="bd-placeholder-img" width="100%" height="250" xmlns="/assets/images/my_folder/USMA-1.png" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" 
+           style="background-image:url(static/assets/images/my_folder/USMA-2.jpg);height: 550px;" role="img">
+               
+            </svg>
+      
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="color: black;">
+              <h5 class="card-title">Poltava State Medical University </h5>
+              <p class="card-text" style="color: black;">
+                UMSA is one of the oldest leading higher educational establishments in Ukraine, which traces back its history to the Faculty of Odontology, which was established at the Kharkiv Medical Academy in 1921. In the year 1994, by the order of the Cabinet of Ministers of Ukraine, it was reorganized into the Ukrainian Medical Stomatological Academy.
+
+                The Academy employs 92 Doctors of Sciences, 408 PhDs; 82 persons who have the academic rank of Professor, 226 persons who have the academic rank of Associate Professor. Among the scientific and pedagogical workers of the Academy there are 6 Laureates of the State Award, 10 Honored Doctors of Ukraine, 6 Honored Scientists and Technicians of Ukraine, 1 Honored Worker of Public Health of Ukraine, 1 Honored Rationalizer of Ukraine, 2 Honored Worker of Education of Ukraine.
+                
+              </p>
+              <p class="card-text" style="color: black;">
+                <strong> ACCREDITATION</strong>
+                <br/>
+                In 1994, by the decision of the Interdepartmental Accreditation Commission and the
+                 order of the Ministry of Education of Ukraine, the educational institution was accredited 
+                 with the highest, fourth level of accreditation.
+                <br/>
+                <strong> TUITION FEES</strong>
+                <br/>
+                <strong> MBBS</strong>
+                <br/>
+                4080$/year 1-2 years<br/>
+                4850$/year from 3rd-6th year<br/> 
+                
+              <strong>  Dentistry</strong>
+              <br/>	
+                4600$/year 1-2 years<br/>
+                5400$/year from 3rd-5th year 
+                <br/>
+               <strong> Nursing </strong>
+                3000$/year
+                <br/>
+                Preparatory course 1000$/year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<div align="center">
+    <h3 align="center" style="color: darkblue;">Poltava State Medical University - Quick Highlights</h3>
+<table border="1"  style="color: black;">
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>Last date to apply</h4></td>
+        <td><h5>August, 2019</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Basic Eligibility</h4></td>
+        <td><h5>50% in PCB</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>NEET Exam</h4></td>
+        <td><h5>Yes, its compulsary</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Course Fee</h4></td>
+        <td><h5>2.80 Lakhs/Year(approx)</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>Course Duration</h4></td>
+        <td><h5>6 years including internship</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Medium of Education</h4></td>
+        <td><h5>Russian, English or Ukranian</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>university Ranking</h4></td>
+        <td><h5>Country Rank -76<br/>
+        World Rank - 7255</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Accreditation</h4></td>
+        <td><h5>4th Level Accreditation</h5></td>
+    </tr>
+</table>
+<br/>
+</div>
+<div >
+    <h2 style="color: darkblue;">Advantages of Studying at Poltava State Medical University</h2>
+    <div >
+   <p style="color: black;"> 
+       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+       Because of highly qualified teachers/lecturers and Leaders, MBBS in UMSA Poltava is a 
+       very high-quality MBBS Program.
+
+   </p>
+</div>
+<div >
+   <p style="color: black;"> 
+       <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+       The cost of studying MBBS in UMSA Poltava for Indian student is low and affordable.
+
+
+   </p>
+</div>
+<div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        Indian Students applying for MBBS in Poltava State Medical University 
+        are eligible for many licensing examinations like MCI Screening test,
+         USMLE (USA), and other licensing exams throughout the world
+
+ 
+ 
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        No entrance test such as IELTS/TOFEL is required for admission 
+        into Poltava State Medical University.
+
+ 
+ 
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        Cost of Living is low in Poltava and thus the life of students 
+        will become easier while studying at Poltava State Medical University.
+
+ 
+ 
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        Education in Poltava State Medical University is a
+         part of the Bologna Process which ensures high-quality education.
+
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        Poltava State Medical University offers English Medium courses.
+
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        MBBS from UMSA Poltava is Globally Recognised by many organizations in the world.
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        There is “No Donation and No hidden charges” while studying MBBS at Poltava State Medical University.
+    </p>
+ </div>
+ <div >
+    <p style="color: black;"> 
+        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+        Studying MBBS at Poltava State Medical University is highly demanded as it is a Government University.
+    </p>
+ </div>
+</div>
+<br/>
+</div>
+<div align="center" style="background-color:lightcyan">
+	{% include 'poltava_section.html'%}
+</div>
+<br/>
+<div  class="table-responsive-sm">
+    <h2 style="color: darkblue;">Poltava State Medical University - MBBS Fee Structure 2019-2020
+    </h2>
+    <br/>
+    <table border="1" style="color: black;" class="table table-striped w-auto" style="width: max-content;">
+        <thead>
+          <tr>
+            <th scope="col">Fee Structure</th>
+            <th scope="col">Year 1</th>
+            <th scope="col">Year 2</th>
+            <th scope="col">Year 3</th>
+            <th scope="col">Year 4</th>
+            <th scope="col">Year 5</th>
+            <th scope="col">Year 6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tution Fee</td>
+            <td>$4008</td>
+            <td>$4008</td>
+            <td>$4800</td>
+            <td>$4800</td>
+            <td>$4800</td>
+            <td>$4800</td>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+          </tr>
+          <tr>
+            <td>Hostel</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+          </tr>
+          <tr>
+            <td>OCT(Ukraine)</td>
+            <td>$3000</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>          <tr>
+            <tr>
+                <td>OCT(India)</td>
+                <td>$1430</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr>
+                <td>Total(US)</td>
+                <td>$12030</td>
+                <td>$7600 </td>
+                <td>$7600</td>
+                <td>$7600</td>
+                <td>$7600</td>
+                <td>$7600</td>
+              </tr>  
+              <tr>
+                <td>Total(RS)</td>
+                <td>₹ 8,42,100</td>
+                <td>₹ 5,32,000 </td>
+                <td>₹ 5,32,000</td>
+                <td>₹ 5,32,000</td>
+                <td>₹ 5,32,000</td>
+                <td>₹ 5,32,000</td>
+              </tr>  
+            </tbody>
+      </table>
+</div>
+<div>
+    <h5 style="color: black;margin-left: 10px;">Note</h5>
+    <div style="margin-left: 19px;" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           <strong>OCT - </strong> One time charges
+        </p>
+     </div>
+     <div style="margin-left: 19px;" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           <strong>India One Time Charges - </strong> $ 1430 (Visa & Flight Excluded)
+        </p>
+     </div>
+</div>
+   <div>
+       <h2  style="color: darkblue;">
+        Documents Required: For MBBS Course
+       </h2>
+    <div class="card mb-3" style="background-color: white;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{%static 'assets/images/my_folder/USMA-1.png'%}" height="480" width="500" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8" align="left">
+            <div class="card-body">
+                <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        A completely filled copy of the Application Form
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Copy of ID Card or International Passport of a student (which has a minimum validity for 2 years
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Welcome Letter from the University
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Medical Health Certificate showing Mental 
+                        and Physical Fitness (attested by Ministry of Foreign Affairs);
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Birth Certificate’s copy;
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        6 color photos (size 6×4 cm)
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        HSC passing certificate (Original and a copy)
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Filled Application Form
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Flight tickets To and Fro
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Copy of International Passport (it should be minimum valid for one year)
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Copy of School Leaving Certificate (with subject details)
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Cost of Invitation Letter should be sent which is 400 US$ and Courier charges 100 US$
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Original Invitation letter
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Secondary school certificate (attested by Ministry of Foreign Affairs or with Apostille stamp)
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Medical Certificate showing Mental and Physical Fitness (attested by Ministry of Foreign Affairs)
+
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Original passport (valid for 1-year minimum)
+
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        2 Passport size Photos (3.5 x 4.5, for Visa processing)
+
+
+
+
+                      </p>
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+   <div>
+    <h2  style="color: darkblue;">
+      Eligibility Criteria: For MBBS Course at Poltava SMU
+
+    </h2>
+ <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-4" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The student must have completed HSC from a regular board.
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Students need to clear NEET from 2019 onwards for admission in any country abroad.
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The student must be minimum 17 years old as on 31st December of the year in which the admission is being taken.
+
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The student must have an aggregate of at least 50% in Physics, 
+                     Chemistry, and Biology and must have English as a compulsory subject if the student is from the General category.
+
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The student must have an aggregate of 
+                     at least 40% in Physics, Biology, and Chemistry, 
+                     and must have English as a compulsory subject if the student is from SC/ST/OBC category.
+                      </p>
+                  </div>
+         </div>
+       </div>
+       <div class="col-md-8">
+        <img src="{%static 'assets/images/my_folder/doctor.jpg'%}" height="400" class="card-img" alt="...">
+      </div>
+     </div>
+   </div>
+</div>
+<div>
+  <div style="color: black;">
+  <div class="container">
+    <div class="page-header">
+        <h2 id="timeline"><b>Admission Procedure for Students</b></h2>
+    </div><br>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body" >
+            	<h4><strong>Step 1</strong></h4>
+              <p style="color: blue;">Students should fill the application form online by considering all the details to avoid any mistakes  and send it to Poltava State Medical University and then they should select a course.
+
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 2</strong></h4>
+              <p style="color: blue;"> Students should send the required documents which are mentioned above by email.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 3</strong></h4>
+              <p style="color: blue;">Once the university has reviewed all the documents it will notify students with an acceptance or rejection letter based on the eligibility criteria of students.</p>
+            </div>
+          </div>
+        </li>
+
+       <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 4</strong></h4>
+              <p style="color: blue;">Students will receive an admission confirmation letter within 1 working day if their application has been accepted by the university.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 5</strong></h4>
+              <p style="color: blue;">Then students would need to send the documents required for the invitation letter.</p>
+            </div>
+          </div>
+        </li>
+         <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 6</strong></h4>
+              <p style="color: blue;">The University will review the documents and after receiving the necessary payment from the students, University will send an invitation letter to the students. </p>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step </strong></h4>
+              <p style="color: blue;">Students will also receive a visa support letter from Poltava State Medical University. </p>
+            </div>
+          </div>
+        </li>
+         <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 8</strong></h4>
+              <p style="color: blue;">Students would be then required to apply for a visa.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 9</strong></h4>
+              <p style="color: blue;">Students must inform about their flight details to the University so that a representative from the University can pick up them at the airport.</p>
+            </div>
+          </div>
+        </li>
+         <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 10</strong></h4>
+              <p style="color: blue;">In case if a student fails to inform the University about their arrival, then they will be deported back to the homeland.</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div>
+  <h2  style="color: darkblue;">
+    Facilities Provided by Poltava State Medical University
+  </h2>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-8" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   UMSA has excellent hostel facility close to the academic block in the campus itself for Boys and Girls separately.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The University hostel gives its students bed sheets, pillow, blanket, Laundry, TV, Refrigerator, Dining and Heating system and Microwave oven for free to use.
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The hostel rooms are clean, airy, hygienic and well ventilated. Each wing of the hostel has a recreation room and the rooms are fully furnished.
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Hostels have 24-hour access to security and emergency services for students.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Campus residents can also make use of services such as campus Security Services, health Services, and counseling Services.
+Facilities offered by Sports Complex of Poltava State Medical University are:
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Stadium (football, athletics)
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Badminton
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Swimming pool
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Table tennis and Tennis
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Class of chess
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Halls for sport games (basketball, volleyball)
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Gym
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Original Invitation letter
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Standard grounds for playing basketball, mini-football, volleyball, 
+                   a ground tennis court and outdoor sports equipment are available at 
+                   the sports complex of the University.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   All sports grounds are equipped with modern lighting and an acoustic system.
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The health care of the University offers
+                    prevention procedures such as vaccination and eyesight testing for students.
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Doctors of both sexes are included in the Health care staff.
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+              <p style="color: black;"> 
+                  <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                  All students at the University are medically insured.
+
+
+
+
+
+
+                </p>
+           </div>
+           <div >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                The medical care provided by the University covers 
+                preventive care, operations, medical examination and medicaments.
+
+
+
+
+
+
+              </p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div>
+  {% include 'poltava_faculties.html'%}
+</div>
+<br/>
+<div>
+  <h2 style="color: darkblue;" >
+    Hostel and Accommodation
+
+  </h2>
+  <br/>
+
+  <div>
+  <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-8" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Ukrainian Medical Dental/Stomatological Academy (UMSA) has a very good hostel system with fully furnished rooms, surrounded by a recreation center and a quiet study environment.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The Ukrainian Medical Stomatological/Dental Academy (UMSA) has 5 hostels with the total area of 36981 sq.m and it can accommodate nearly 3081 students.
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     All international students who receive an academic offer get a guarantee of accommodation placement services by the University.
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Certain accommodation options are available for 
+                     international students and it is important to consider whether 
+                     students prefer an independent lifestyle or enjoy living in a community.
+
+  
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Rooms on campus are available to students at the university. 
+                     All hostel rooms are furnished and vary in the number of conveniences and size.
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Dormitory rooms at the UMSA hostel can accommodate 2 or 3 students to a room.
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Badminton
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     All rooms are equipped with a 
+                     bed, mattress, pillow, blanket, desk, chair, heater, water heaters 
+                     and suitable lighting for both study and relaxation.
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     There are common areas where students can play and mingle in their spare time.
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The students at the hostel are also offered with a facility of a kitchen.
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Every floor has a shared kitchen. Here, students can cook their own food.
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The University has a multi-storey hostel and offers well-furnished rooms with gym, 
+                     basic furniture, free electricity, Wi-Fi, reading room, 24 Hours Hot and cold running 
+                     water and much more.
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     In nearby apartments, Off-campus housing can be obtained. These available houses and
+                      apartments are furnished and vary in size, cost, and the number of conveniences.
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     All the rooms are provided with heaters.
+                      Hostels of this University have 24-hour access to security and emergency services,
+                       making it easy to get assistance when you need it.
+  
+                   </p>
+              </div>
+              
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+
+<h2 style="color: darkblue;" >
+  Student Life at Poltava State Medical University
+
+
+</h2>
+<br/>
+
+<div>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-8" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The University provides a comprehensive health care service to all the students of USMA.
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students of the University are medically insured and the University Health Service is
+                    free for all the staff members and University students.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The students who have completed their medical degrees from Poltava State Medical
+                    University in Ukraine can sit for the MCI Screening Test or FMGE.
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students can study in other European countries as the University has bilateral student 
+                   agreements in place with countries such as Finland, Czech Republic, Sweden, and others.
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students get individual attention while studying here as, the Faculty to Student Ratio 
+                   is about 1:14, that is class size is small.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students also get excellent accommodation facilities, sports facilities and great 
+                   scope for extra-curricular activities.
+                 </p>
+            </div>
+          </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+
+<h2 style="color: darkblue;" >
+  Cost of Living at Poltava
+
+
+
+</h2>
+<br/>
+
+<div>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-8" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students will need about $1200 per year while studying in Poltava. This is the cost above the cost of their tuition.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Compared to any other European countries the cost of living in Poltava is less.
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students should have some cash in hand for immediate costs.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   In Ukraine, there are foreign exchange offices everywhere.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students should not carry large amounts of cash personally while roaming out or should not leave any cash in their room.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Students should open a bank account as early as possible after their arrival. In the University campus, there are four different banks with their branches.
+
+                 </p>
+            </div>
+
+            <div >
+              <p style="color: black;"> 
+                  <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                  Eating at a mid-range restaurant in the Poltava city costs around Rs.1100 - Rs. 1200.
+
+
+                </p>
+           </div>
+
+           <div >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                Things of day to day life including food items like vegetables, milk, fruits, grains, cheese, beef, rice, eggs, bread, groceries, chicken, etc. costs between Rs.20 - Rs. 450.
+
+
+              </p>
+         </div>
+         <div >
+          <p style="color: black;"> 
+              <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+              Rent for a month for 1 bedroom apartment ranges in between Rs. 9,500 - Rs. 16,500.
+
+
+
+            </p>
+       </div>
+
+       <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            One way ticket of any local transport costs around Rs.11 and a monthly pass costs around Rs. 368.
+
+
+
+          </p>
+     </div>
+
+
+          </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+
+<div>
+  <h2  style="color: darkblue;">
+    About Poltava City
+
+  </h2>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-4" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   On the Vorskla River in central Ukraine, Poltava city is located.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   It is the administrative center of the Poltava Oblast (province),
+                    as well as the surrounding Poltava Reion (district) of the oblast.
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The estimated population of Poltava is 296,760 within the area of 112 sq.km.
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The geographical position of Poltava is quite favorable. 
+                   Poltava stands on important transport routes and provides communication between 
+                   the largest cities of Ukraine - Kharkiv, Kyiv, and Dnipro.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Poltava’s location near large metallurgical, engineering and scientific centers
+                    such as Kyiv, Kharkiv, Dnipro determined the development of machine building, 
+                    chemical industry.
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   6 color photos (size 6×4 cm)
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Poltava city’s climate is moderate continental with cool winters and warm (
+                     sometimes hot) summers.
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The average temperatures of the city are 5 degrees in January and 18 degrees in June.
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   The average amount of rainfall per year totals 162 days and up to 556 millimeters per year.
+
+
+
+                 </p>
+            </div>
+           
+       </div>
+     </div>
+     <div class="col-md-8">
+      <img src="{%static 'assets/images/my_folder/poltava_city.jpg'%}" height="590" width="500" class="card-img" alt="...">
+    </div>
+   </div>
+ </div>
+</div>
+<div>
+  {% include 'footer.html'%}
+</div>
+
+
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/news.js' %}"></script>
+</div>
+</body>
+</html>

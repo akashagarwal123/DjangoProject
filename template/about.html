@@ -1,0 +1,484 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About us</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static  'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/about.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/about_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									<li><a href="/news" style="color: darkred;">News</a></li>
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="/signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us:+380-684090715 </div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li>
+					
+					{% include 'menu_courses.html'%}
+				</li>
+				<li><a href="/news">News</a></li>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us:+380-684090715 </div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/IMG_8044.jpeg)">
+		</div>
+
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Quick Enquiry!!!</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing <strong>Brand Universities</strong></div>
+					<div class="section_title"><h2>A few words about us</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="text_highlight">Who are we </div>
+						<div class="about_text">
+							<p>We are organisation in ukriane india russia kryzstan belarus usa gerogia china 
+								armenia Kazakhstan Philippines Bangladesh and nepal. 
+								Providing students with genuine guidence about education opportunities Abroad.
+							
+							</p>
+						</div>
+						<br/>
+						<div class="text_highlight">Our Mission </div>
+						<div class="about_text">
+							<p>
+								Our mission is to provide legitimate 
+								information and provide constant support to the students until they have completed their course.
+							</p>
+						</div>
+						<br/>
+						<div class="text_highlight">Our Core Values </div>
+						<div class="about_text">
+							<p>
+								Student and parent focus for ensuring high level of customer services.
+Transparency in dealing by way of providing accurate and comprehensive information to the clientele.
+Providing Timely and effective communication whenever and wherever required and needed.
+To work with utmost honesty and commitment for the betterment of our student community.
+Achieving Excellence in whatever we do through creativity and innovation of the services that we provide.
+Never giving up on the challenges faced and consistently working to overcome them.
+Providing a conducive working environment for our employees who are our assets in maintaining a positive work, 
+culture and healthy interactions with our clientele.
+							</p>
+						</div>
+						<br/>
+						
+						<div class="button about_button"><a href="#">read more</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image"><img src="{% static '/assets/images/my_folder/about_us_image.jpg' %}" alt=""></div>
+					<div class="text_highlight">Our Credentials</div>
+					<div class="about_text">
+						<p>
+							Since MBBS in Abroad is a big decision, choosing the right consultant will make a lot of difference. 
+							Rus Education bridges the gap 
+							between Students and Universities by providing them world-class benefits and this is what you need.
+						</p>
+					</div>
+					<br/>
+					<div class="text_highlight">Our Personalized Services</div>
+					<div class="about_text">
+						<p>
+							<strong>&mdash;</strong>&nbsp; Counselling<br/>
+							<strong>&mdash;</strong>&nbsp; University Selection<br/>
+							<strong>&mdash;</strong>&nbsp; MCI Coaching in Universities<br/>
+						    <strong>&mdash;</strong>&nbsp; Step By Step Admission Process<br/>
+							<strong>&mdash;</strong>&nbsp; Career Counselling<br/>
+							<strong>&mdash;</strong>&nbsp; Travel/Visa Assistance
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<div class="container">
+			<div class="row">
+				
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'assets/images/mountain.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="5289">0</div>
+						<div class="milestone_text">Students Counselled</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'assets/images/island.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="5">0</div>
+						<div class="milestone_text">Years Exp. in Ukraine</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'assets/images/camera.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="60">0</div>
+						<div class="milestone_text">Document Collection Point</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="{% static 'assets/images/boat.svg' %}" alt=""></div>
+						<div class="milestone_counter" data-end-value="55">0</div>
+						<div class="milestone_text">Medical Universities</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+
+			<img src="{% static '/assets/images/my_folder/poster.jpg'%}">
+		</div>
+		<br/>
+	</div>
+<br/>
+
+	<!-- Why Choose Us -->
+
+	<div class="why">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/static/assets/images/my_folder/why.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>Why choose us?</h2></div>
+				</div>
+			</div>
+			<div class="row why_row">
+				
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'assets/images/my_folder/fast_service.jpg' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'assets/images/my_folder/service.jpg' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">Fast Services</div>
+							<div class="why_text">
+								<p>We are the leading service providers and try to fulln
+									fill the customer needs as fast as possible.Our hard work and dedication provides us the world 
+									class facilities 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'assets/images/my_folder/great_team.png' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'assets/images/my_folder/gt.png' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">Great Team</div>
+							<div class="why_text">
+								<p>We have an umost enthusiastic team members that work 24*7 to provide best faciliies 
+									around the globe.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Why item -->
+				<div class="col-lg-4 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{% static 'assets/images/my_folder/correct-information.jpg' %}" alt="">
+							<div class="why_icon d-flex flex-column align-items-center justify-content-center">
+								<img src="{% static 'assets/images/my_folder/cinfo.jpg'' %}" alt="">
+							</div>
+						</div>
+						<div class="why_content text-center">
+							<div class="why_title">
+								Complete Assistance​</div>
+							<div class="why_text">
+								<p>
+									On every step of the process be assured of full assistance from our team.
+									
+									  
+
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Team -->
+
+	<div class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>Meet the Team</h2></div>
+				</div>
+			</div>
+			<div class="row team_row">
+				
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'assets/images/my_folder/hod_1.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Adv. Anshul Chaurasia</a></div>
+							<div class="team_text">
+								<p>Head of Company</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'assets/images/my_folder/ks.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Kamleshwar Singh</a></div>
+							<div class="team_text">
+								<p>Head of Organization</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+					<!-- Team Item -->
+					<div class="col-xl-3 col-md-6 team_col">
+						<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+							<div class="team_image"><img src="{% static 'assets/images/my_folder/member.PNG' %}" alt=""></div>
+							<div class="team_content">
+								<div class="team_title"><a href="#">Gaurav Mani</a></div>
+								<div class="team_text">
+									<p>Head Associate of Noth Zone</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'assets/images/my_folder/member_1.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Anurag Kumar</a></div>
+							<div class="team_text">
+								<p>Member</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'assets/images/my_folder/member_2.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Janvi Singh</a></div>
+							<div class="team_text">
+								<p>Member</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-3 col-md-6 team_col">
+					<div class="team_item d-flex flex-column align-items-center justify-content-start text-center">
+						<div class="team_image"><img src="{% static 'assets/images/my_folder/supervisor.jpg' %}" alt=""></div>
+						<div class="team_content">
+							<div class="team_title"><a href="#">Abhishek Singh</a></div>
+							<div class="team_text">
+								<p>Supervisor/Member</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+		<div  align="center">
+			<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-66946dba-1565-456b-8273-8496ba74984c"></div>
+		</div>
+	<!-- Footer -->
+	{% include 'footer.html'%}
+
+	</div>
+
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'assets/plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'assets/plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'assets/plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/about.js' %}"></script>
+</body>
+</html>

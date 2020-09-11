@@ -1,0 +1,65 @@
+<div style="color: darkred; font-size: 16px; margin-top: 15px;">
+    <strong>
+        Courses
+    </strong>
+</div>
+								<ul class="main-navigation">
+								<li><a href="#"  style="color:maroon;">MBBS</a>
+									<ul>
+									<li><a href="{% url 'vinista'%}"  style="color:darkred;">Vinnitsa National Medical University</a></li>
+									<li><a href="{% url 'poltava'%}"  style="color: darkred;">Ukraine Medical Stomatological Academy</a></li>
+									<li><a href="{% url 'kharkiv'%}"  style="color: darkred;">V.N.Karazin Kharkiv National University</a></li>
+									<li><a href="{% url 'ternopil'%}"  style="color: darkred;">Ternopil National Medical University</a></li>
+									</ul>
+									<li> <a href="#" style="color:maroon;">Engineering</a>
+									<ul>
+									<li><a href="#" style="color: darkred;"></a></li>
+									<li><a href="#" style="color: darkred;"></a>
+									</li>
+									</ul> </li>
+									<li> <a href="#" style="color: maroon;">Aviation</a>
+										<ul>
+										<li><a href="#" style="color: darkred;"></a></li>
+										<li><a href="#" style="color: darkred;"></a>
+										</li>
+										</ul> </li>
+								</li>
+								</ul>
+										
+										<style>
+									
+									li ul { display: none; }
+
+									ul li a {
+									display: block;
+									padding: 1em;
+									text-decoration: none;
+									white-space: nowrap;
+									}
+
+									ul li a:hover { background:transparent }
+									li:hover > ul {
+									display: block;
+									position: absolute;
+									}
+
+									li:hover li { float: none; }
+
+									li:hover a { background:transparent }
+
+									li:hover li a:hover { background:yellow}
+
+									.main-navigation li ul li { border-top: 0; }
+									ul ul ul {
+									left: 100%;
+									top: 0;
+									}
+									ul:before,
+									ul:after {
+									content: " "; /* 1 */
+									display: table; /* 2 */
+									}
+
+									ul:after { clear: both; }
+
+										</style>

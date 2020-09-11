@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h4 style="color: darkgray;">Dream to study abroad</h4>
+<h2 style="color: black;">OUR 4-E PROCESS</h2>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div>
+        <img src="{% static '/assets/images/my_folder/explore.png' %}" width="100" height="100" align="center">
+      </div>
+      <br/>
+      <h3 style="color: darkblue;" >Explore</h3>
+      <p>Educating the student and their family about the country and university that has been 
+          selected in the first step. 
+          Providing the student with every necessary informations.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div>
+        <img src="{% static '/assets/images/my_folder/educate.jpg' %}" width="100" height="100" align="center">
+      </div>
+      <br/>
+      <h3 style="color: darkblue;" >Educate</h3>
+      <p>
+        Educating the student and their family about the country and university that has 
+        been selected in the first step. Providing the student with every necessary information.
+      </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <div>
+        <img src="{% static '/assets/images/my_folder/empower.png' %}" width="100" height="100" align="center">
+      </div>
+      <br/>
+      <h3 style="color: darkblue;"  >Empower</h3>
+      <p>
+        With Good Education, comes empowerment, giving young Individuals of our society a chance 
+        to move forward, in turn making the world a better, safer, healthier place.
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div>
+        <img src="{% static '/assets/images/my_folder/enrich.png' %}" width="100" height="100" align="center">
+      </div>
+      <br/>
+      <h3 style="color: darkblue;"  >Enrich</h3>
+      <p>
+          
+        With Good Empowerment, comes encrichment, giving young Individuals  a chance 
+        to move forward, in turn making the world a better place, and thus, enriching
+        them with better personality.
+      </p>
+    </div>
+  </div>
+</div>
+<br/>
+</body>
+</html>

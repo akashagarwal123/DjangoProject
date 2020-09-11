@@ -1,0 +1,841 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>V.N.Karazin Kharkiv National University</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									<li><a href="/about" style="color: darkred;">About us</a></li>
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us:+380-684090715 </div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+    </header>
+</div>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li>
+					{% include 'menu_courses.html'%}
+					</li>
+				
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us:+380-684090715 </div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/kharkiv1.jpg)"></div>
+	</div>
+	<!-- Search -->
+
+	<div class="home_search" >
+		<div class="container" >
+			<div class="row" >
+				<div class="col">
+					<div class="home_search_container" >
+						<div class="home_search_title">Get free counselling from our experts</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    </div>
+    <body>
+        <br/>
+    <div class="card mb-3" style="max-width: 2000px;max-height: fit-content;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <svg class="bd-placeholder-img" width="100%" height="250" xmlns="/assets/images/my_folder/USMA-1.png" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" 
+           style="background-image:url(static/assets/images/my_folder/kharkiv_india.jpg);height: 320px;" role="img">
+               
+            </svg>
+      
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="color: black;">
+              <h5 class="card-title">About V.N.Karazin Kharkiv National University, Ukraine </h5>
+            
+              <p class="card-text" style="color: black;">
+               
+                V.N. Karazin Kharkiv National Medical University was established in November 1804 in accordance with the charter of Tsar Alexander I. The university has an important contribution towards the Ukrainian national renaissance of the 19th to 20th centuries. The V.N. Karazin Kharkiv National University is well-known as the scientific and academic hub of Ukraine.
+
+                V.N. Karazin Kharkiv National University is the only university in Ukraine that has trained a number of world-famous researchers, scholars, educators, biologists, economist and Nobel prize laureates.
+                
+                Since the university’s foundation, the university has graduated around 130,000 students. Among them, 60 university graduates have become the academicians and the member of the Ukrainian National Academy of Sciences (UNAS). The university has developed a higher education system in the Kharkiv region.
+                
+                With the involvement of extensive international cooperation, the V.N.Karazin Kharkiv National University is an active member of the international community of the leading European and World universities.
+                
+                In October 1999, the university has gained the status of a National University and was named in honor of its founder, V.N. Karazin.              </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br/>
+
+    <div align="center" >
+        <h3 align="center" style="color: darkblue;">V.N.Karazin Kharkiv National University- Quick Highlights</h3>
+    <br/>
+        <table border="1"  style="color: black;">
+       <tbody>
+           <tr style="background-color: lightskyblue;">
+               <td><h4>Intake for MBBS Course</h4></td>
+               <td><h5>August, 2020</h5></td>
+           </tr>
+        <tr>
+            <td><h4>IELTS/TOEFL</h4></td>
+            <td><h5>Required</h5></td>
+        </tr>
+        <tr style="background-color:lightskyblue;" >
+            <td><h4>NEET Exam</h4></td>
+            <td><h5>Required</h5></td>
+        </tr>
+        <tr>
+            <td><h4>Processing Time for MBBS <br/>
+                Admission at V.N.Karazin KNU</h4></td>
+            <td><h5>45-60 days</h5></td>
+        </tr>
+        <tr style="background-color:lightskyblue;" >
+            <td><h4>Course Fee</h4></td>
+            <td><h5>Rs. 3.78 Lakhs/Year</h5></td>
+        </tr>
+        <tr >
+            <td><h4>Course Duration</h4></td>
+            <td><h5>6 years including internship</h5></td>
+        </tr>
+        <tr style="background-color:lightskyblue;" >
+            <td><h4>Medium of Teaching</h4></td>
+            <td><h5>English Language</h5></td>
+        </tr>
+        <tr>
+            <td><h4>university Ranking</h4></td>
+            <td><h5>Country Rank -2<br/>
+            World Rank - 2829</h5></td>
+        </tr>
+        <tr style="background-color:lightskyblue;" >
+            <td><h4>University Recognition</h4></td>
+            <td><h5>MCI, WHO approved</h5></td>
+        </tr>
+        <tr>
+            <td><h4>Student Enrollment</h4></td>
+            <td><h5>15,000 -19,999</h5></td>
+        </tr>
+        <tr style="background-color:lightskyblue;" >
+            <td><h4>International Students	</h4></td>
+            <td><h5>	4302</h5></td>
+        </tr>
+        <tr>
+            <td><h4>Total Faculty Staff	</h4></td>
+            <td><h5>2108</h5></td>
+        </tr>
+    </tbody>
+    </table>
+    <br/>
+    </div>
+    <br/>
+    
+    <div  align="left" style="margin-left:50px" >
+        <h2 style="color: darkblue;">Why Study MBBS at V.N.Karazin KNU?
+        </h2>
+        <h4 style="color: black;"> 
+            There are many benefits for
+             Indian students to study MBBS course at V.N.Karazin Kharkiv National University.
+              Following are some of them-
+        </h4>
+        <div >
+       <p style="color: black;"> 
+           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           The V.N. Karazin KNU provides extensive international exposure to international students having an affiliation with 61 partner universities in 25 countries of the world.
+
+
+    
+       </p>
+    </div>
+    <div >
+       <p style="color: black;"> 
+           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           The university has an experienced faculty staff that provides a superior level of teaching.
+
+
+    
+    
+       </p>
+    </div>
+    <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The cost of living and education at V.N.Karazin Kharkiv National University is affordable to each international student.
+
+
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            Within the framework of international programs, students will get exposure from different parts of the countries like the USA, Canada, Russia, Germany, Japan, Switzerland, Bulgaria, Great Britain and other countries.
+
+
+     
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The medium of teaching is English. If a student wants to study medicine in some other language then he/she can opt for preparatory courses.
+
+
+     
+        </p>
+     </div>
+    <br/>
+    </div>
+<br/>
+    
+<div style="margin-left: 50px;">
+    <h2 style="color: darkblue;">
+        Fee Structure: For MBBS Course at V.N.Karazin KNU
+    </h2>
+    <div align="center">
+    <table class="table" border="1" style="width: fit-content;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Particulars</th>
+                <th>Fee in USD</th>
+                <th>Fee in INR</th>
+            </tr>
+        </thead>
+        <tbody style="color: black;">
+            <tr>
+                <td>Tuition Fees</td>
+                <td>5400</td>
+                <td>3,78,000</td>
+            </tr>
+            <tr>
+                <td>Hostel Fees</td>
+                <td>1000</td>
+                <td>70,000</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>6400</td>
+                <td>4,48,000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div >
+    <p style="color: black;" > <strong>Note: 1$=</strong>Rs.70 (It may vary) </p>
+  </div>
+</div>
+<br/>
+<div>
+{% include 'kharkiv_syllabus.html'%}
+<br/>
+</div>
+<div>
+    <div>
+        <div style="color: black;">
+        <div class="container">
+          <div class="page-header">
+              <h2 id="timeline"><b>Admission Procedure for Students</b></h2>
+          </div><br>
+          <ul class="timeline">
+              <li>
+                <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-body" >
+                      <h4><strong>Step 1</strong></h4>
+                    <p style="color: blue;">
+                        The applicants should submit the application form available on the official website 
+               <strong><a style="color: black;text-decoration: none;" href="https://www.univer.kharkov.ua/en">
+                CLICK HERE</a> 
+               </strong>that is 
+                        approved by the Ministry of Education and Science of Ukraine. It usually takes 10-15 days to review the applications.
+      
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-body">
+                      <h4><strong>Step 2</strong></h4>
+                    <p style="color: blue;"> 
+                        The admission committee will make the decision on
+                         your applications for study at the National University of Life and Environmental Sciences of Ukraine. 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-body">
+                      <h4><strong>Step 3</strong></h4>
+                    <p style="color: blue;">
+                        The eligible candidate will get an official invitation letter from the university.</p>
+                  </div>
+                </div>
+              </li>
+      
+             <li class="timeline-inverted">
+                <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-body">
+                      <h4><strong>Step 4</strong></h4>
+                    <p style="color: blue;">
+                        After getting the invitation letter, the candidate needs to apply for a student visa to the nearest Ukrainian embassy of a country.
+                  </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-body">
+                      <h4><strong>Step 5</strong></h4>
+                    <p style="color: blue;">
+                        The candidate should inform the date of arrival to the university so that the university’s representative will come to pick the candidate at the airport.
+                    </p>
+                  </div>
+                </div>
+              </li>
+          </ul>
+      </div>
+      </div>
+      </div>
+      </div>
+<br/>
+      <div style="margin-left: 50px;">
+        <h2  style="color: darkblue;">
+            Eligibility Criteria
+          </h2>
+          <h4 style="color: black;">
+            For studying medicine at V.N. Karazin KNU, a candidate needs to qualify the following criteria:
+          </h4>
+<br/>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-8" align="left">
+             <div class="card-body">
+                 <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Applicant’s age should be in between 17 to 25 years.
+
+      
+                         </p>
+                   </div>
+                   <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Applicants must take the subjects like Physics, Chemistry, Biology,
+                         Mathematics with an aggregate of 50% for open category & 45% for reserved category.
+
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        NEET exam is mandatory for each applicant.
+
+      
+                        </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Applicants need to qualify the English language proficiency test like IELTS/TOEFL.
+
+                        </p>
+                  </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <br/>
+
+      <div style="margin-left:50px;">
+        <h2  style="color: darkblue;">
+            Documents Required to MBBS Course
+        </h2>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-8" align="left">
+             <div class="card-body">
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         10th Certificate
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         12th Marksheet and Certificate
+      
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                       NEET Report Card
+     
+     
+     
+     
+     
+                      </p>
+                 </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Birth Certificate
+      
+      
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         English proficiency certificate
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Copy of Passport
+      
+      
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Passport Size Photographs
+                        </p>
+                  </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+    <br/>
+    <div>
+        <h2 style="color: darkblue;">
+          V.N.Karazin Kharkiv National University - FMGE Performance 2019
+      
+        </h2>
+        <br/>
+        <h4 style="color: black;">
+            The details about FMGE performance 
+            for V.N.Karazin Kharkiv National University of year 2019 with passing percent is as follows:
+        </h4>
+        <br/>
+        <table class="table" border="1">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name of University	</th>
+              <th>Appeared</th>
+              <th>Total Pass	</th>
+              <th>Pass %
+              </th>
+            </tr>
+          </thead>
+          <tbody style="color: black;">
+            <tr>
+              <td>V.N.Karazin Kharkiv National University</td>
+              <td>290</td>
+              <td>109</td>
+              <td>37.59%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <br/>   
+    <div>
+        <div style="margin-left:50px;">
+        <h2 style="color: darkblue">Accreditation
+        </h2>
+    </div>
+        <div style="margin-left: 60px;" >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                Ministry of Education and Science of Ukraine
+    
+    
+            </p>
+         </div>
+         <div style="margin-left: 60px;" >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                MCI & WHO approved
+            </p>
+         </div>
+    </div>
+    <br/>
+    <div style="margin-left:50px;">
+        <div >
+        <h2 style="color: darkblue">Memberships and Affiliations
+        </h2>
+        <h4 style="color: black;">
+            Below section includes the affiliations 
+            of V.N.Karazin Kharkiv National University with the following associations:
+        </h4>
+    </div>
+        <div >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                European University Association (EUA)
+    
+    
+            </p>
+         </div>
+         <div  >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                European Fusion Education Network (FUSENET)
+            </p>
+         </div>
+         <div  >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                Magna Charta Universitatum Observatory (MCUO)
+
+            </p>
+         </div>
+         <div  >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                International Association of Universities (IAU)
+
+            </p>
+         </div>
+         <div  >
+            <p style="color: black;"> 
+                <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                European Nuclear Education Network (ENEN)
+            </p>
+         </div>
+    </div>
+    <br/>
+    <div style="margin-left:50px;">
+        <div>
+            <h2 style="color: darkblue;">
+                Cost of Living
+            </h2>
+        </div>
+        <div style="width:fit-content">
+            <table class="table" border="1">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Particulars</th>
+                        <th>In USD (approx. range)</th>
+                        <th>In Rupees (approx. range)</th>
+                    </tr>
+                </thead>
+                <tbody style="color: black;">
+                <tr>
+                    <td>Accommodation</td>
+                    <td>90</td>
+                    <td>6440</td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>71</td>
+                    <td>5080</td>
+                </tr> <tr>
+                    <td>Transportation</td>
+                    <td>10</td>
+                    <td>700</td>
+                </tr> <tr>
+                    <td>Clothing</td>
+                    <td>22</td>
+                    <td>1574</td>
+                </tr> <tr>
+                    <td>Other expenses</td>
+                    <td>30</td>
+                    <td>2146</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="margin-left: 50px;">
+        <h2 style="color: darkblue;">
+          Hostel and Accommodation
+      
+        </h2>
+        <br/>
+        <div>
+        <img src="{% static 'assets/images/my_folder/solar.png'%}" alt="..." class="rounded-top"height="100" width="100">
+        <img src="{% static 'assets/images/my_folder/desk.png'%}" alt="..." class="rounded-right" height="100" width="100">
+        <img src="{% static 'assets/images/my_folder/chair.png'%}" alt="..." class="rounded-bottom" height="100" width="100">
+        <img src="{% static 'assets/images/my_folder/blanket.png'%}"  alt="..." class="rounded-left" height="100" width="100">
+        <img src="{% static 'assets/images/my_folder/pillow.jpg'%}" alt="..." class="rounded-circle" height="100" width="100">
+        <img src="{% static 'assets/images/my_folder/mattress.jpg'%}" alt="..." class="rounded-0" height="100" width="100">
+        </div>
+        <br/>
+        <div>
+        <div class="card mb-3" style="background-color: white;">
+           <div class="row no-gutters">
+             <div class="col-md-8" align="left">
+               <div class="card-body">
+                   <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           All the rooms in hostels are well-furnished with accommodation of 2 to 3 students in each room.
+
+      
+        
+                         </p>
+                    </div>
+                    <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           Each hostel room has an attached kitchen and bathrooms.
+
+      
+        
+        
+                         </p>
+                    </div>
+                    <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           The hostel has 24-hour security and emergency services.
+
+      
+        
+        
+        
+                         </p>
+                    </div>
+                    <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           There are separate accommodation is provided for more than 2000 foreign students.
+
+        
+                         </p>
+                    </div>
+                    <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           The campus area of the hostel has free wifi facility to provide internet services.
+
+                         </p>
+                    </div>
+                    <div >
+                       <p style="color: black;"> 
+                           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                           The university has a hostel mess providing the food including breakfast, lunch, snacks and many more.
+                         </p>
+                    </div> 
+               </div>
+             </div>
+           </div>
+         </div>
+        </div>
+      <br/>
+      <div>
+        <h2 style="color: darkblue;">
+            About Kharkiv City
+      
+        </h2>
+      <div class="card mb-3" style="background-color: white;">
+         <div class="row no-gutters">
+           <div class="col-md-4" align="left">
+             <div class="card-body">
+                 <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Kharkiv is the 2nd largest populous city in Ukraine located in the northeast of the country. T
+                         he city has the largest scientific center in Ukraine. 
+                         The average population of Kharkiv city is around 1,447,000 with an area of 350 sq.km.
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         Being one of the largest industrial centers of Ukraine, the city provides excellent employment in
+                          large machine building, 
+                         metalworking plants, as well as enterprises of power engineering, electrical industry, chemical industry.
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         The city also offers transportation such as railways 
+                         and highways with an extensive network of public transport like taxis, buses, trolleybuses, trams etc.
+      
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         The climate of Kharkiv city is moderately continental with mild winters and long, hot & 
+                         sometimes dry summers. The average temperature 
+                         in January is minus 4.6 degrees Celsius & in the month of July,
+                          the temperature is plus 21.3 degrees Celsius.
+                       </p>
+                  </div>
+                  <div >
+                     <p style="color: black;"> 
+                         <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                         The Kharkiv city is rich in architectural sights of the 19th-20th centuries. 
+                         Historical museums, monuments, parks, churches are the ones sought attraction for tourists.
+                       </p>
+                  </div>
+              </div>
+           </div>
+           <div class="col-md-8">
+            <img src="{%static 'assets/images/my_folder/vk.jpg'%}" height="590" width="500" class="card-img" alt="...">
+          </div>
+         </div>
+       </div>
+      </div>
+    </div>
+      <div>
+          {% include 'footer.html' %}
+      </div>
+      <script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+      <script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+      <script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+      <script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+      <script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+      <script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+      <script src="{% static 'assets/js/news.js' %}"></script>
+      </div>
+  </body>
+</html>

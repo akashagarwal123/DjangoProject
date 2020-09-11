@@ -1,0 +1,1133 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Vinnista University</title>
+<!-- add icon link -->
+<link rel = "icon" href =  
+"{%  static 'assets/images/my_folder/logo.jpg'%}" 
+	type = "image/x-icon"> 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles/news_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div align="center" style="color:ghostwhite;background-color: black;">
+			<h4>
+				<b>
+					<strong>Admissions are open: 
+					<a href="{% url 'register'%}"  style="color:teal;text-decoration: none; padding: 0px 20px 0px 20px; border-radius: 2px 2px 2px 2px; background-color:lightcyan">Apply Online </a></strong>
+				</b>
+			</h4>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index"><div>
+								<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+							</div></a><div style="color: bisque;">Eduglobel9</div></div>
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index" style="color: darkred;">Home</a></li>
+									<li><a href="/about" style="color: darkred;">About us</a></li>
+									<li>
+										{% include 'treeview.html'%}
+									</li>
+									
+									<li><a href="/contact" style="color: darkred;">Contact</a></li>
+									<li><a href="signin" style="color: darkred;">Login</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto" style="color: darkred;">Call us:+380-684090715</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/index"><div>
+				<img src="{% static 'assets/images/my_folder/logo.jpg'%}" height="80px" width="80px">
+			</div></a><div style="color: black;">Eduglobel9</div></div>
+
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li>
+					{% include 'menu_courses.html'%}
+					</li>
+				
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/signin">Login</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: +380-684090715</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url(/static/assets/images/my_folder/vinista.jpg)"></div>
+	</div>
+	<!-- Search -->
+
+	<div class="home_search" >
+		<div class="container" >
+			<div class="row" >
+				<div class="col">
+					<div class="home_search_container" >
+						<div class="home_search_title">Get free counselling from our experts</div>
+						<div class="home_search_content">
+							<form method="POST" action="{% url 'index' %}" class="home_search_form" id="home_search_form">
+								{% csrf_token %}
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" name='fullname' placeholder="Full Name" required="required">
+									<input type="text" class="search_input search_input_2" name='email' placeholder="Email" required="required">
+									<input type="text" class="search_input search_input_3" name='phonenumber' placeholder="Phone Number" required="required">
+									<input type="text" class="search_input search_input_4" name='message' placeholder="Message" required="required">
+									<button class="home_search_button">submit</button>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+										<h5 style="color: darkgreen;">{{info}}</h5>
+										<h5 style="color: darkred;">{{erro}}</h5>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <body>
+    <div class="card mb-3" style="max-width: 2000px;max-height: fit-content">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <svg class="bd-placeholder-img" width="100%" height="250" xmlns="/assets/images/my_folder/USMA-1.png" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" 
+           style="background-image:url(static/assets/images/my_folder/v2.jpg);height: 400px;" role="img">
+               
+            </svg>
+      
+          </div>
+          <div class="col-md-8">
+            <div class="card-body" style="color: black;">
+              <h5 class="card-title">Vinnitsa National Medical University </h5>
+              <br>
+              <img src="{% static 'assets/images/my_folder/v3.jpg'%}" width="100" height="100"> </img>
+              <br/>
+              <p class="card-text" style="color: black;">
+               
+Vinnitsa National Medical University was established in 1921. The educational institution was named after Pirogov in 1960. Vinnitsa National Medical University has been granted the status of a university in the year 1994.
+
+The university has a high level of experienced staff for academic curriculum. The national status of the university was awarded as “Diplomas of Cabinet of Ministers of Ukraine and Verkhovna Rada of Ukraine”.
+
+The Vinnitsa National Medical University has well-biased faculties who guide the students not only in studies also for a career.
+
+Vasil Maksimovich Moroz (M.D., Professor) is a rector of the university and a member of National Academy of Medical Science of Ukraine. The university has got state prize of Ukraine in the field of science and technology.
+              </p>
+          </div>
+        </div>
+      </div>
+<br/>
+      <div  align="left" >
+        <h2 style="color: darkblue;">Structure of University:
+        </h2>
+        <div >
+       <p style="color: black;"> 
+           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           There are 126 doctors of sciences and 677 candidates of sciences in the medical departments.
+
+    
+       </p>
+    </div>
+    <div >
+       <p style="color: black;"> 
+           <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           25 honored scientists and technicians of Ukraine
+
+    
+    
+       </p>
+    </div>
+    <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The university has honored workers of higher education in Ukraine along with 3 academicians of the Academy of Sciences of Ukraine.
+
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The university is proud to have 12 honored doctors of Ukraine, 5 winners of state prize of Ukraine.
+
+     
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The university has 26 computer classes, 4 channels of internet network with free access for all the students.
+
+     
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            The university has 12 scientific schools collaborated with medical faculties of universities in 19 foreign countries.
+
+        </p>
+     </div>
+     <div >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+            Faculties of departments are involved in the implementation of 62 international projects.
+
+    
+        </p>
+     </div>
+    <br/>
+    </div>
+
+    <br/>
+
+<div>
+    <h3 style="color: black;">Vinnitsa National Medical University - Quick Highlights</h3>
+    <br/>
+<table border="1"  style="color: black;">
+   <tbody>
+    <tr>
+        <td><h4>Basic Eligibility</h4></td>
+        <td><h5>	10+2 passed with 60% in PCB</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>NEET Exam</h4></td>
+        <td><h5>Yes, its compulsary</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Course Fee</h4></td>
+        <td><h5>Rs. 4.00 Lakhs/Year</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>Course Duration</h4></td>
+        <td><h5>6 years including internship</h5></td>
+    </tr>
+    <tr>
+        <td><h4>Medium of Education</h4></td>
+        <td><h5>English Language</h5></td>
+    </tr>
+    <tr style="background-color:lightskyblue;" >
+        <td><h4>university Ranking</h4></td>
+        <td><h5>Country Rank -64<br/>
+        World Rank - 5596</h5></td>
+    </tr>
+    <tr>
+        <td><h4>University Recognition</h4></td>
+        <td><h5>MCI, WHO and UΝЕЅСО accredited</h5></td>
+    </tr>
+</tbody>
+</table>
+<br/>
+</div>
+<br/>
+<div class="table-responsive-sm">
+    <h2 style="color: darkblue;">Vinnitsa National Medical University - Fee Structure 2020
+
+    </h2>
+    <br/>
+    <table border="1" style="color: black;" class="table table-striped w-auto" style="width: max-content;">
+        <thead>
+          <tr>
+            <th scope="col">Fee Structure</th>
+            <th scope="col">Year 1</th>
+            <th scope="col">Year 2</th>
+            <th scope="col">Year 3</th>
+            <th scope="col">Year 4</th>
+            <th scope="col">Year 5</th>
+            <th scope="col">Year 6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tution Fee</td>
+            <td>$ 5000</td>
+            <td>$ 5000</td>
+            <td>$ 5000</td>
+            <td>$ 5000</td>
+            <td>$ 5000</td>
+            <td>$ 5000</td>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+            <td>$1500</td>
+          </tr>
+          <tr>
+            <td>Hostel</td>
+            <td>	$ 1000</td>
+            <td>	$ 1000</td>
+            <td>	$ 1000</td>
+            <td>	$ 1000</td>
+            <td>	$ 1000</td>
+            <td>	$ 1000</td>
+          </tr>
+          <tr>
+            <td>OCT(Ukraine)</td>
+            <td>$3000</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>          <tr>
+            <tr>
+                <td>OCT(India)</td>
+                <td>$1430</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr>
+                <td>Total(US)</td>
+                <td>$ 11,930	</td>
+                <td>$ 7,500	 </td>
+                <td>$ 7,500	</td>
+                <td>$ 7,500	</td>
+                <td>$ 7,500	</td>
+                <td>$ 7,500	</td>
+              </tr>  
+            </tbody>
+      </table>
+</div>
+<div>
+    <h5 style="color: black;margin-left: 10px;">Note</h5>
+    <div style="margin-left: 19px;" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           <strong>OCT - </strong> One time charges
+        </p>
+     </div>
+     <div style="margin-left: 19px;" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           <strong>India One Time Charges - </strong> $ 1430 (Visa & Flight Excluded)
+        </p>
+     </div>
+     <div style="margin-left: 19px;" >
+        <p style="color: black;"> 
+            <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+           <strong>$1 - </strong>  Rs.73 (It may vary)       </p>
+     </div>
+</div>
+
+<br/>
+<div>
+    <h2 style="color: darkblue;">
+        Why Study MBBS at Vinnitsa National Medical University?
+
+    </h2>
+    <br/>
+ <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-4">
+         <img src="{%static 'assets/images/my_folder/s4.jpg'%}" height="280" width="500" class="card-img" alt="...">
+       </div>
+       <div class="col-md-8" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Vinnitsa National Medical University has a high passing percentagein the MCI Screening Test.
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     As per students review, the university provides one of the foremost education among the medical universities in the world.
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Studying MBBS at VNMU is the best option by considering: Cost of living, Accommodation, Cost of studies, travel, internships etc
+
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Classy environment and self-learning culture accompanied by quality education.
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Experts are provided for the preparation of FMGE exams.
+
+                    </p>
+              </div>
+                      </div>
+       </div>
+     </div>
+   </div>
+</div>
+
+    </div>
+
+    <div>
+      {% include 'vinista_syllabus.html'%}
+    </div>
+   <div>
+       <h2  style="color: darkblue;">
+        Document Required: For Admissions at Vinnitsa NMU
+
+       </h2>
+    <div class="card mb-3" style="background-color: white;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{%static 'assets/images/my_folder/vinista.jpg'%}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8" align="left">
+            <div class="card-body">
+                <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Enrollment application form
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Original invitation letter (translated into the Ukrainian language approved by the Embassy of Ukraine in the respective country)
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        High school Certificate (Original and Attested copy)
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Birth Certificate
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        Health Certificate
+
+
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        12 photographs (3x4 cm)
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        HIV test certificate.
+
+
+                      </p>
+                 </div>
+                 <div >
+                    <p style="color: black;"> 
+                        <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                        International Passport
+
+
+
+                      </p>
+                 </div>
+                 
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+   <div>
+    <h2 style="color: darkblue;">
+        Eligibility Criteria: for MBBS at VNMU
+
+
+    </h2>
+ <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-4" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The candidate must have a minimum 75% score in English subjects at class 10 and 10+2 level.
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The candidates should have a minimum 75% of marks in Physics, biology and Chemistry subjects.
+
+
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The candidate should mail the above documents to the admission department at VNMU at the time of the application process.
+
+
+
+
+                   </p>
+              </div>
+            
+         </div>
+       </div>
+       <div class="col-md-8">
+        <img src="{%static 'assets/images/my_folder/doctor.jpg'%}" width="200" height="200" class="card-img" alt="...">
+      </div>
+     </div>
+   </div>
+</div>
+
+<div>
+  <div style="color: black;">
+  <div class="container">
+    <div class="page-header">
+        <h2 id="timeline"><b>Admission Procedure for Students</b></h2>
+    </div><br>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body" >
+            	<h4><strong>Step 1</strong></h4>
+              <p style="color: blue;">
+                To get admission in Vinnitsa National Medical University without undergoing preparatory department studies, the candidates should have to pass the interviews in biology, chemistry, and language of studies/instruction.
+
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 2</strong></h4>
+              <p style="color: blue;"> 
+                The foreign students who have higher secondary school certificate from the recognized university are eligible to apply for a medical course at VNMU.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 3</strong></h4>
+              <p style="color: blue;">
+                If a student wants to study a medical course in the Ukrainian language, they have to undergo preparatory courses at VNMU.</p>
+            </div>
+          </div>
+        </li>
+
+       <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 4</strong></h4>
+              <p style="color: blue;">
+                The tuition fee does not include the paid medical insurance and medical examination on arrival to the university.    
+            </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 5</strong></h4>
+              <p style="color: blue;">
+                Candidates should have to submit attested copy of documents at the time of admission process.</p>
+            </div>
+          </div>
+        </li>
+         <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-body">
+            	<h4><strong>Step 6</strong></h4>
+              <p style="color: blue;">
+                After counseling and interview process, the eligible candidate will get an offer letter from the university.</p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div>
+  <br/>
+  <div>
+    <h2 style="color: darkblue;">University Expenditure</h2>
+    <br/>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <tbody style="color: teal;">
+        <tr>
+         
+          <td>Faculty of General Medicine	</td>
+          <td>4400 US$ per annum</td>
+        </tr>
+        <tr>
+         
+          <td>Pharmaceutical Faculty	</td>
+          <td>3600 US$ per annum</td>
+        </tr>
+        <tr>
+     
+          <td>Faculty of Dentistry	</td>
+          <td>4600 US$ per annum</td>
+        </tr>
+        <tr>
+     
+          <td>Preparatory Faculty		</td>
+          <td>1600 US$ per annum</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-left: 15px;">
+    <p style="color: black;">
+      <strong>Note-</strong>
+        The cost of a student health examination
+         after the commencement of each academic year evaluated either separately 
+         or with the cost of medical insurance.
+    </p>
+    <br/>
+  </div>
+ <table class="table">
+        <thead class="thead-dark">
+          <tr>
+           <th scope="col">Particulars</th>
+            <th scope="col">For Dormitories</th>
+            <th scope="col">For apartment</th>
+          </tr>
+        </thead>
+        <tbody style="color: black;">
+          <tr>
+            <td>Transportation</td>
+            <td>$ 20</td>
+            <td>$ 50</td>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>$ 100-$ 150</td>
+            <td>$ 150-$ 200</td>
+          </tr>
+          <tr>
+            <td>Rent</td>
+            <td>$ 50</td>
+            <td>Varies as per apartment</td>
+          </tr>
+          <tr>
+          
+            <td>Miscellaneous</td>
+            <td>$ 100</td>
+            <td>$ 100-$ 150</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+<div>
+  <h2 style="color: darkblue;">
+    Visa Process
+    </h2>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-8" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   After getting an invitation letter from Vinnitsa National Medical University, 
+                   the candidates should have to apply for a visa in the Ukrainian Embassy of Delhi 
+                   for Indian students.
+
+                   </p>
+             </div>
+             <div >
+              <p style="color: black;"> 
+                  <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                  The candidate can apply for a visa from 15th July to 10th October.
+
+                  </p>
+            </div>
+            <div >
+              <p style="color: black;"> 
+                  <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                  The processing time for a visa is 60 days from the date of visa application.
+
+                  </p>
+            </div>
+          </div>
+      </div>
+   </div>
+</div>
+</div>
+<div>
+  <h2 style="color: darkblue;">
+    Documents Required: For Visa Process
+
+  </h2>
+<div class="card mb-3" style="background-color: white;">
+   <div class="row no-gutters">
+     <div class="col-md-8" align="left">
+       <div class="card-body">
+           <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Birth Certificate in Hindi or English ( translated in English and Authorized)
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Passport with a minimum of 2 years validity
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   10th Certificate
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   12th Marksheet and Certificate
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Passport size photo - 20
+
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Official invitation letter from the University of Ukraine
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Medical Insurance
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   School transfer certificate
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Health test documents
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Translation of all documents by the Ukraine Embassy.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Authorization of documents approved by the Ministry of External Affairs, New Delhi.
+
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Authorization of all documents by the Ministry of Education, Kiev, Ukraine.
+
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Original Invitation letter
+
+
+                 </p>
+            </div>
+            <div >
+               <p style="color: black;"> 
+                   <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                   Ukraine student visa fees
+
+
+
+                 </p>
+            </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<br/>
+<div>
+  <h2 style="color: darkblue;">
+    Vinnitsa National Medical University - FMGE Performance 2019
+
+  </h2>
+  <br/>
+  <h4 style="color: black;">
+    Find the passing percent and appeared 
+    students in year 2019 for Vinnitsa National Medical University is here in the table below:
+  </h4>
+  <br/>
+  <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name of University	</th>
+        <th>Appeared</th>
+        <th>Total Pass	</th>
+        <th>Pass %
+        </th>
+      </tr>
+    </thead>
+    <tbody style="color: black;">
+      <tr>
+        <td>Vinnitsa National Medical University</td>
+        <td>134</td>
+        <td>49</td>
+        <td>36.57%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 style="color: darkblue;">
+    International Student’s Faculty
+
+  </h2>
+  <br/>
+
+  <div>
+  <div class="card mb-3" style="background-color: white;">
+     <div class="row no-gutters">
+       <div class="col-md-8" align="left">
+         <div class="card-body">
+             <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The international student's facultyat Vinnitsa National Medical University was founded in 1996.
+
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The aim of the faculty is to integrate university into a worldwide education system.
+
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     It endeavors to study and apply for the leading experience in the field of high medical education, to develop research projects & to promote VNMU achievements in the world.
+
+
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Increase in a number of foreign students results in FSF’s high professionalism.
+
+  
+  
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     It ensures the quality of education for international students in the University
+
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     Students have an option to choose their language of instruction as per convenience.
+
+
+  
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     About 90% of international students are studying their medical courses in the English language.
+
+  
+                   </p>
+              </div>
+              <div >
+                 <p style="color: black;"> 
+                     <img src="{% static '/assets/images/my_folder/correct.png'%}" height="20" width="20">
+                     The students who want to study MBBS in Ukrainian or Russian language, they can enroll themselves for a preparatory course with aperiod of 10 months.
+
+                   </p>
+              </div>
+              
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+</div>
+<div   class="table-responsive-sm">
+  <div  class="column-md-4">
+    <h2 style="color: darkblue;">
+      Vinnitsa National Medical University - Important FAQs
+    </h2>
+
+  </div>
+
+<div >
+  <div id="accordion" align="center">
+    <div class="card">
+      <div class="card-header" id="headingOne"  style="background-color:cadetblue;" >
+        <h5 class="mb-0">
+          <button class="btn btn-link" style="color: white;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Is Vinnitsa National Medical University MCI approved?
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body" style="color: black;" >
+          Yes, it is MCI approved.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What is the course <br/>duration for MBBS at Vinnitsa National Medical University?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body" style="color: black;" >
+          The duration of the MBBS course at Vinnitsa National Medical University is 6 years.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree" style="background-color: cadetblue;">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" style="color: white;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How is the MBBS course<br/> duration divided at Vinnitsa National Medical University?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body" style="color: black;" >
+          The 6 years MBBS course is divided into 5 years of course and 1 year of Internship.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Why is there a separate<br/> eligibility criterion about the English language?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body" style="color: black;" >
+          The medium of teaching in Vinnitsa National Medical University for foreign students is English, and there 
+          is no need to clear TOEFL or IELTS exams, hence there is a separate criterion about the English language.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFive" style="background-color: cadetblue;">
+        <h5 class="mb-0">
+          <button style="color: white;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Where is the Vinnitsa <br/>National Medical University located?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+        <div class="card-body" style="color: black;" >
+          The Vinnitsa National Medical University is located in the Vinnitsa city of Ukraine.
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+  {% include 'footer.html'%}
+</div>
+
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'assets/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'assets/plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/news.js' %}"></script>
+</div>
+</body>
+</html>
