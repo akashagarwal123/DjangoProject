@@ -326,9 +326,9 @@ def forget(request):
 def subscribe(request):
     subject = "Eduglobal9 Newsletter"
     body = 'Hey '+request.POST.get('username')+','+'\n'+'Thank you for seeking an interest in us'+'\n'+'\n'+'Please find the attachment'+'\n'+'~Regards'+'\n'+'Team Eduglobal9'
-    sender_email = "eduglobel9info@gmail.com"
+    sender_email = "youremail@gmail.com"
     receiver_email = request.POST.get('email')
-    password ="tndznfybjwuyvqdo"
+    password ="yourpassword"
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
